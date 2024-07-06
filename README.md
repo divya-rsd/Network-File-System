@@ -1,7 +1,7 @@
-# Network File System
+## Network File System
 
 
-## Assumptions
+### Assumptions
 
 - Accessible paths in the storage server are predefined, taken from the paths present in the directory where the storage server code is run.
 - All storage servers have the same IP address. Changing the port number and running it in another directory connects that storage server to the naming server.
@@ -14,7 +14,7 @@
      The path given here is an absolute path.
 - Logs can be checked using the command: `grep "NamingServer" /var/log/syslog`
   
-## Implementation
+### Implementation
 
 After running the naming server, it listens on a socket, receives a request type, and handles the storage or client accordingly. The request type sent from the storage server is 'I,' and that from the client is 'P.'
 
